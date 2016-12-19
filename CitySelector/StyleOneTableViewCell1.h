@@ -32,6 +32,9 @@ typedef NS_ENUM(NSInteger, TLocateState)
 
 typedef void(^TLocateHanlder)(NSString *title);
 
+/**
+ 定位显示的Button，并且可以选择当前城市
+ */
 @property(nonatomic,strong)UIButton *locateCityButton;
 
 /**

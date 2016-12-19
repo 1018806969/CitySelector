@@ -22,6 +22,13 @@
 
 
 // 搜索联系人的方法 (拼音/拼音首字母缩写/汉字)
+/**
+ 在所有城市中选择满足条件的城市
+
+ @param searchText 条件
+ @param dataArray 所有城市数组
+ @return 满足条件的城市列表
+ */
 + (NSArray<Citys *> *)searchText:(NSString *)searchText inDataArray:(NSArray<Citys *> *)dataArray;
 
 

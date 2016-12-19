@@ -36,6 +36,9 @@
     self.locateCityButton.frame = CGRectMake(20, 5, rect.size.width, rect.size.height);
     
 }
+/**
+ 重写
+ */
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -45,7 +48,10 @@
     }
     return self ;
 }
--(void)locateScc
+/**
+ 选择当前定位出的城市，利用block回调将城市传递出去
+ */
+-(void)selectCurrentCity
 {
     if (_locationHander) {
         _locationHander(self.locateCityButton.titleLabel.text);
@@ -84,7 +90,7 @@
         locationCityBtn.userInteractionEnabled = NO;
         
         _locateCityButton = locationCityBtn;
-        [_locateCityButton addTarget:self action:@selector(locateScc) forControlEvents:UIControlEventTouchUpInside];
+        [_locateCityButton addTarget:self action:@selector(selectCurrentCity) forControlEvents:UIControlEventTouchUpInside];
     }
     return _locateCityButton;
 }

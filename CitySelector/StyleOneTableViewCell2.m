@@ -10,10 +10,19 @@
 
 @interface StyleOneTableViewCell2()
 
+/**
+ 回调传递选择的城市
+ */
 @property(nonatomic,copy)TSelectCityHandle handle;
 
+/**
+ 所有热门城市的父试图
+ */
 @property(nonatomic,strong)UIView         *view ;
 
+/**
+ 所有热门城市
+ */
 @property(nonatomic,strong)NSMutableArray *buttons;
 
 @end
@@ -30,6 +39,9 @@
     // Configure the view for the selected state
 }
 
+/**
+ 重写
+ */
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -43,11 +55,17 @@
 {
     _handle = [handle copy];
 }
+/**
+ 重写set方法
+ */
 -(void)setGroup:(CityGroup *)group
 {
     _group = group;
     [self createCityButton];
 }
+/**
+ 选择城市回调
+ */
 -(void)selectCity:(UIButton *)btn
 {
     if (_handle) {

@@ -32,6 +32,9 @@
  */
 @property(nonatomic,strong)NSString    *locateName;
 
+/**
+ 选择城市之后的回调
+ */
 @property(nonatomic,copy)TSelectedCityHandle selectCityHandle;
 
 
@@ -41,10 +44,13 @@
 @property(nonatomic,strong)NSMutableArray *cityInGroups;
 
 /**
- 所有的城市
+ 所有的城市，只有城市名没有groupname
  */
 @property(nonatomic,strong)NSArray<Citys *> *allCitys;
 
+/**
+ 存储热门城市的行高
+ */
 @property(nonatomic,strong)NSMutableDictionary *cellHeightDictionary;
 
 @end
@@ -60,8 +66,6 @@ static NSString *const TNormalCell   = @"TNormalCell";
     [super viewDidLoad];
     
     self.title = @"type1";
-    self.view.backgroundColor = [UIColor whiteColor];
-    
     [self.view addSubview:self.tableView];
     
     //定位
@@ -98,7 +102,7 @@ static NSString *const TNormalCell   = @"TNormalCell";
             CLPlacemark *currentPlace = [placemarks firstObject];
             weadSelf.locateName = currentPlace.locality;
         }
-        [NSTimer scheduledTimerWithTimeInterval:1 target:weadSelf selector:@selector(reloadLocationCity) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:0 target:weadSelf selector:@selector(reloadLocationCity) userInfo:nil repeats:NO];
     }];
     
 }
@@ -143,8 +147,8 @@ static NSString *const TNormalCell   = @"TNormalCell";
         [cell selectedCityHandle:^(NSString *name) {
             [weaSelf cityDidSelected:name];
         }];
+        //通过重写cellheight的get方法获取cell.cellheight并且保存在字典中
         [self.cellHeightDictionary setValue:[NSNumber numberWithFloat:cell.cellHeight] forKey:[NSString stringWithFormat:@"%ld", indexPath.section]];
-        NSLog(@"-----------------%f",cell.cellHeight);
         return cell;
     }else
     {
@@ -155,6 +159,9 @@ static NSString *const TNormalCell   = @"TNormalCell";
         return cell ;
     }
 }
+/**
+ 为每个区添加标题
+ */
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) return @"定位城市";
     return  [self.cityInGroups[section-1] index];
@@ -231,6 +238,9 @@ static NSString *const TNormalCell   = @"TNormalCell";
         resultController.results = [Citys searchText:searchText inDataArray:self.allCitys];
     }
 }
+/**
+ 重写get方法，获取allcitys
+ */
 -(NSArray <Citys *> *)allCitys
 {
     NSMutableArray<Citys *> *allData = [NSMutableArray array];
@@ -255,11 +265,6 @@ static NSString *const TNormalCell   = @"TNormalCell";
     // 销毁
     self.searchController = nil;
 }
-
-
-
-
-
 
 
 - (UITableView *)tableView {

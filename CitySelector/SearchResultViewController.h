@@ -19,6 +19,9 @@ typedef void(^TSelectedCityHandle)(NSString *name);
  */
 @property(nonatomic,strong)NSArray<Citys *> *results;
 
+/**
+ 选择了某个城市传递出去
+ */
 -(void)selectedCityHandle:(TSelectedCityHandle)handle;
 
 @end

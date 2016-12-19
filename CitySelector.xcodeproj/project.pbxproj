@@ -100,18 +100,13 @@
 				B485118A1E07785D0025D897 /* AppDelegate.m */,
 				B485118C1E07785D0025D897 /* ViewController.h */,
 				B485118D1E07785D0025D897 /* ViewController.m */,
-				B485119D1E077E450025D897 /* StyleOneViewController.h */,
-				B485119E1E077E450025D897 /* StyleOneViewController.m */,
-				B48511A41E0781980025D897 /* StyleOneTableViewCell1.h */,
-				B48511A51E0781980025D897 /* StyleOneTableViewCell1.m */,
-				B48511A71E0781AC0025D897 /* StyleOneTableViewCell2.h */,
-				B48511A81E0781AC0025D897 /* StyleOneTableViewCell2.m */,
+				B48511C91E07E1A70025D897 /* StyleOne */,
+				B48511B11E07CE1F0025D897 /* SearchResultViewController.h */,
+				B48511B21E07CE1F0025D897 /* SearchResultViewController.m */,
 				B48511AB1E07B5DD0025D897 /* CityGroup.h */,
 				B48511AC1E07B5DD0025D897 /* CityGroup.m */,
 				B48511AE1E07B9370025D897 /* Citys.h */,
 				B48511AF1E07B9370025D897 /* Citys.m */,
-				B48511B11E07CE1F0025D897 /* SearchResultViewController.h */,
-				B48511B21E07CE1F0025D897 /* SearchResultViewController.m */,
 				B485118F1E07785D0025D897 /* Main.storyboard */,
 				B48511B41E07D33F0025D897 /* PinYin4Objc */,
 				B48511921E07785D0025D897 /* Assets.xcassets */,
@@ -164,6 +159,19 @@
 				B48511C21E07D33F0025D897 /* unicode_to_hanyu_pinyin.txt */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B48511C91E07E1A70025D897 /* StyleOne */ = {
+			isa = PBXGroup;
+			children = (
+				B485119D1E077E450025D897 /* StyleOneViewController.h */,
+				B485119E1E077E450025D897 /* StyleOneViewController.m */,
+				B48511A41E0781980025D897 /* StyleOneTableViewCell1.h */,
+				B48511A51E0781980025D897 /* StyleOneTableViewCell1.m */,
+				B48511A71E0781AC0025D897 /* StyleOneTableViewCell2.h */,
+				B48511A81E0781AC0025D897 /* StyleOneTableViewCell2.m */,
+			);
+			name = StyleOne;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
