@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "StyleOneViewController.h"
+#import "StyleTwoViewController.h"
 
 @interface ViewController ()
 
@@ -35,7 +36,11 @@
 
 - (IBAction)type2:(UIButton *)sender {
     
-    
+    StyleTwoViewController *twoViewController = [[StyleTwoViewController alloc]init];
+    [twoViewController selectedCityHandle:^(NSString *name) {
+        NSLog(@"选择的城市为%@",name);
+    }];
+    [self.navigationController pushViewController:twoViewController animated:YES];
 }
 - (IBAction)type3:(UIButton *)sender {
     

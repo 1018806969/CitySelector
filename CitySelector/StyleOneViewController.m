@@ -243,21 +243,24 @@ static NSString *const TNormalCell   = @"TNormalCell";
  */
 -(NSArray <Citys *> *)allCitys
 {
-    NSMutableArray<Citys *> *allData = [NSMutableArray array];
-    int index = 0;
-    for (CityGroup *citysGroup in _cityInGroups) {// 获取所有的city
-        if (index == 0) {// 第一组, 热门城市忽略
-            index++;
-            continue;
-        }
-        if (citysGroup.cities.count != 0) {
-            for (Citys *city in citysGroup.cities) {
-                [allData addObject:city];
+    if (!_allCitys) {
+        NSMutableArray<Citys *> *allData = [NSMutableArray array];
+        int index = 0;
+        for (CityGroup *citysGroup in _cityInGroups) {// 获取所有的city
+            if (index == 0) {// 第一组, 热门城市忽略
+                index++;
+                continue;
             }
+            if (citysGroup.cities.count != 0) {
+                for (Citys *city in citysGroup.cities) {
+                    [allData addObject:city];
+                }
+            }
+            index++;
         }
-        index++;
+        _allCitys = allData;
     }
-    return allData;
+    return _allCitys;
 }
 
 // 这个代理方法在searchController消失的时候调用, 这里我们只是移除了searchController, 当然你可以进行其他的操作

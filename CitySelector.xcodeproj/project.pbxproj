@@ -26,6 +26,9 @@
 		B48511C61E07D33F0025D897 /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B48511BE1E07D33F0025D897 /* PinyinFormatter.m */; };
 		B48511C71E07D33F0025D897 /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B48511C01E07D33F0025D897 /* PinyinHelper.m */; };
 		B48511C81E07D33F0025D897 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = B48511C21E07D33F0025D897 /* unicode_to_hanyu_pinyin.txt */; };
+		B48511CD1E08C9550025D897 /* StyleTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48511CC1E08C9550025D897 /* StyleTwoViewController.m */; };
+		B48511D01E08D28D0025D897 /* StyleTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48511CF1E08D28D0025D897 /* StyleTwoTableViewCell.m */; };
+		B48511D31E08D8330025D897 /* StyleTwoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48511D21E08D8330025D897 /* StyleTwoCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,12 @@
 		B48511BF1E07D33F0025D897 /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
 		B48511C01E07D33F0025D897 /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
 		B48511C21E07D33F0025D897 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		B48511CB1E08C9550025D897 /* StyleTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleTwoViewController.h; sourceTree = "<group>"; };
+		B48511CC1E08C9550025D897 /* StyleTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleTwoViewController.m; sourceTree = "<group>"; };
+		B48511CE1E08D28D0025D897 /* StyleTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleTwoTableViewCell.h; sourceTree = "<group>"; };
+		B48511CF1E08D28D0025D897 /* StyleTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleTwoTableViewCell.m; sourceTree = "<group>"; };
+		B48511D11E08D8330025D897 /* StyleTwoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleTwoCollectionViewCell.h; sourceTree = "<group>"; };
+		B48511D21E08D8330025D897 /* StyleTwoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleTwoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +109,8 @@
 				B485118A1E07785D0025D897 /* AppDelegate.m */,
 				B485118C1E07785D0025D897 /* ViewController.h */,
 				B485118D1E07785D0025D897 /* ViewController.m */,
-				B48511C91E07E1A70025D897 /* StyleOne */,
+				B48511CA1E08C9360025D897 /* Method2 */,
+				B48511C91E07E1A70025D897 /* Method1 */,
 				B48511B11E07CE1F0025D897 /* SearchResultViewController.h */,
 				B48511B21E07CE1F0025D897 /* SearchResultViewController.m */,
 				B48511AB1E07B5DD0025D897 /* CityGroup.h */,
@@ -109,10 +119,6 @@
 				B48511AF1E07B9370025D897 /* Citys.m */,
 				B485118F1E07785D0025D897 /* Main.storyboard */,
 				B48511B41E07D33F0025D897 /* PinYin4Objc */,
-				B48511921E07785D0025D897 /* Assets.xcassets */,
-				B48511A01E077EB30025D897 /* cityGroups.plist */,
-				B48511941E07785D0025D897 /* LaunchScreen.storyboard */,
-				B48511971E07785D0025D897 /* Info.plist */,
 				B48511861E07785D0025D897 /* Supporting Files */,
 			);
 			path = CitySelector;
@@ -121,6 +127,10 @@
 		B48511861E07785D0025D897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B48511921E07785D0025D897 /* Assets.xcassets */,
+				B48511A01E077EB30025D897 /* cityGroups.plist */,
+				B48511941E07785D0025D897 /* LaunchScreen.storyboard */,
+				B48511971E07785D0025D897 /* Info.plist */,
 				B48511871E07785D0025D897 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -161,7 +171,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B48511C91E07E1A70025D897 /* StyleOne */ = {
+		B48511C91E07E1A70025D897 /* Method1 */ = {
 			isa = PBXGroup;
 			children = (
 				B485119D1E077E450025D897 /* StyleOneViewController.h */,
@@ -171,7 +181,20 @@
 				B48511A71E0781AC0025D897 /* StyleOneTableViewCell2.h */,
 				B48511A81E0781AC0025D897 /* StyleOneTableViewCell2.m */,
 			);
-			name = StyleOne;
+			name = Method1;
+			sourceTree = "<group>";
+		};
+		B48511CA1E08C9360025D897 /* Method2 */ = {
+			isa = PBXGroup;
+			children = (
+				B48511CB1E08C9550025D897 /* StyleTwoViewController.h */,
+				B48511CC1E08C9550025D897 /* StyleTwoViewController.m */,
+				B48511CE1E08D28D0025D897 /* StyleTwoTableViewCell.h */,
+				B48511CF1E08D28D0025D897 /* StyleTwoTableViewCell.m */,
+				B48511D11E08D8330025D897 /* StyleTwoCollectionViewCell.h */,
+				B48511D21E08D8330025D897 /* StyleTwoCollectionViewCell.m */,
+			);
+			name = Method2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,10 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48511D01E08D28D0025D897 /* StyleTwoTableViewCell.m in Sources */,
+				B48511D31E08D8330025D897 /* StyleTwoCollectionViewCell.m in Sources */,
 				B485118E1E07785D0025D897 /* ViewController.m in Sources */,
 				B485119F1E077E450025D897 /* StyleOneViewController.m in Sources */,
 				B48511B31E07CE1F0025D897 /* SearchResultViewController.m in Sources */,
 				B48511A61E0781980025D897 /* StyleOneTableViewCell1.m in Sources */,
+				B48511CD1E08C9550025D897 /* StyleTwoViewController.m in Sources */,
 				B48511AD1E07B5DD0025D897 /* CityGroup.m in Sources */,
 				B48511C31E07D33F0025D897 /* ChineseToPinyinResource.m in Sources */,
 				B48511C41E07D33F0025D897 /* HanyuPinyinOutputFormat.m in Sources */,
