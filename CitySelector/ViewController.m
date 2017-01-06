@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "StyleOneViewController.h"
 #import "StyleTwoViewController.h"
+#import "CitySelectView.h"
+#import "Result.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *pickshow;
+@property(nonatomic,strong)CitySelectView  *cityView;
 
 @end
 
@@ -18,6 +22,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _cityView = [[CitySelectView alloc]init];
+    [self.view addSubview:_cityView];
+    
+    //选中城市的回调
+    __weak typeof(self) weakSelf = self ;
+    _cityView.selected = ^(Result *result)
+    {
+        NSString *str = [NSString stringWithFormat:@"%@-%@-%@-%@",result.provinceCode,result.provinceName,result.cityCode,result.cityName];
+        [weakSelf.pickshow setTitle:str forState:UIControlStateNormal];
+    };
+
 }
 
 
@@ -44,8 +60,7 @@
 }
 - (IBAction)type3:(UIButton *)sender {
     
-    
-    
+    [_cityView showCitySelectView];
 }
 
 @end

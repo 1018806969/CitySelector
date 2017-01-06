@@ -29,6 +29,9 @@
 		B48511CD1E08C9550025D897 /* StyleTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48511CC1E08C9550025D897 /* StyleTwoViewController.m */; };
 		B48511D01E08D28D0025D897 /* StyleTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48511CF1E08D28D0025D897 /* StyleTwoTableViewCell.m */; };
 		B48511D31E08D8330025D897 /* StyleTwoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48511D21E08D8330025D897 /* StyleTwoCollectionViewCell.m */; };
+		B4A90A121E1F3ACB008A39B5 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A90A0E1E1F3ACB008A39B5 /* Result.m */; };
+		B4A90A131E1F3ACB008A39B5 /* CitySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A90A101E1F3ACB008A39B5 /* CitySelectView.m */; };
+		B4A90A181E1F3CBC008A39B5 /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4A90A171E1F3CBC008A39B5 /* province.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,11 @@
 		B48511CF1E08D28D0025D897 /* StyleTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleTwoTableViewCell.m; sourceTree = "<group>"; };
 		B48511D11E08D8330025D897 /* StyleTwoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleTwoCollectionViewCell.h; sourceTree = "<group>"; };
 		B48511D21E08D8330025D897 /* StyleTwoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleTwoCollectionViewCell.m; sourceTree = "<group>"; };
+		B4A90A0E1E1F3ACB008A39B5 /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
+		B4A90A0F1E1F3ACB008A39B5 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
+		B4A90A101E1F3ACB008A39B5 /* CitySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySelectView.m; sourceTree = "<group>"; };
+		B4A90A111E1F3ACB008A39B5 /* CitySelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySelectView.h; sourceTree = "<group>"; };
+		B4A90A171E1F3CBC008A39B5 /* province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = province.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +125,12 @@
 				B48511AC1E07B5DD0025D897 /* CityGroup.m */,
 				B48511AE1E07B9370025D897 /* Citys.h */,
 				B48511AF1E07B9370025D897 /* Citys.m */,
+				B4A90A101E1F3ACB008A39B5 /* CitySelectView.m */,
+				B4A90A111E1F3ACB008A39B5 /* CitySelectView.h */,
+				B4A90A0E1E1F3ACB008A39B5 /* Result.m */,
+				B4A90A0F1E1F3ACB008A39B5 /* Result.h */,
 				B485118F1E07785D0025D897 /* Main.storyboard */,
+				B4A90A171E1F3CBC008A39B5 /* province.plist */,
 				B48511B41E07D33F0025D897 /* PinYin4Objc */,
 				B48511861E07785D0025D897 /* Supporting Files */,
 			);
@@ -259,6 +272,7 @@
 				B48511961E07785D0025D897 /* LaunchScreen.storyboard in Resources */,
 				B48511931E07785D0025D897 /* Assets.xcassets in Resources */,
 				B48511911E07785D0025D897 /* Main.storyboard in Resources */,
+				B4A90A181E1F3CBC008A39B5 /* province.plist in Resources */,
 				B48511A11E077EB40025D897 /* cityGroups.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +287,11 @@
 				B48511D01E08D28D0025D897 /* StyleTwoTableViewCell.m in Sources */,
 				B48511D31E08D8330025D897 /* StyleTwoCollectionViewCell.m in Sources */,
 				B485118E1E07785D0025D897 /* ViewController.m in Sources */,
+				B4A90A131E1F3ACB008A39B5 /* CitySelectView.m in Sources */,
 				B485119F1E077E450025D897 /* StyleOneViewController.m in Sources */,
 				B48511B31E07CE1F0025D897 /* SearchResultViewController.m in Sources */,
 				B48511A61E0781980025D897 /* StyleOneTableViewCell1.m in Sources */,
+				B4A90A121E1F3ACB008A39B5 /* Result.m in Sources */,
 				B48511CD1E08C9550025D897 /* StyleTwoViewController.m in Sources */,
 				B48511AD1E07B5DD0025D897 /* CityGroup.m in Sources */,
 				B48511C31E07D33F0025D897 /* ChineseToPinyinResource.m in Sources */,
@@ -441,6 +457,7 @@
 				B485119C1E07785D0025D897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
